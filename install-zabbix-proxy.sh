@@ -10,13 +10,13 @@ Install-Proxy()
 {
 	wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu20.04_all.deb
 	dpkg -i zabbix-release_6.0-4+ubuntu20.04_all.deb
-	apt update
-	apt install zabbix-proxy-mysql zabbix-sql-scripts
+	apt update -y 
+	apt install -y zabbix-proxy-mysql zabbix-sql-scripts
 }
 ############
 Install-MYSQL()
 {
-	sudo apt update
+	sudo apt update -y
 	apt-get install -y mysql-server-8.0
 	systemctl restart mysql
 	systemctl enable mysql
