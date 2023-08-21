@@ -28,7 +28,6 @@ Create-database()
 	 mysql -e "create user 'zabbix'@'localhost' identified by '$PASSWORD';"
 	 mysql -e "grant all privileges on zabbix_proxy.* to zabbix@localhost;"
 	 mysql -e "set global log_bin_trust_function_creators = 1;"
-	 mysql -e "quit;"
 	 cat /usr/share/zabbix-sql-scripts/mysql/proxy.sql | mysql --default-character-set=utf8mb4 -uzabbix -p"$PASSWORD" zabbix_proxy
 }
 ##########
