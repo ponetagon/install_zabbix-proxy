@@ -55,7 +55,7 @@ Edit-config()
 
 read -p "Enter Name Zabbix Proxy(default:Zabbix proxy): " NAME
 read -p "Enter a password for mysql: " PASSWORD
-read -p "Enter IP Zabbix Server(Internal:203.151.50.124,Customer:203.151.50.133): " IP
+read -p "Enter IP Zabbix Server: " IP
 
 
 Install-Proxy
