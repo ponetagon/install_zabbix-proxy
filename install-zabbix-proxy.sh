@@ -47,6 +47,9 @@ Edit-config()
 	    # Update EnableRemoteCommands value to 1
 	    sudo sed -i "s/^# EnableRemoteCommands=0/EnableRemoteCommands=1/" "$config_file"
 
+            # Update ConfigFrequency value to 10
+	    sudo sed -i "s/^# ConfigFrequency=3600/ConfigFrequency=10/" "$config_file"
+
 	    echo "Updated Server,DBPassword,Hostname settings in $config_file"
 	else
 	    echo "Configuration file $config_file not found."
